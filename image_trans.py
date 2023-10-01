@@ -32,7 +32,7 @@ if uploaded_files:
             else:
                 image = Image.open(BytesIO(file_byte_stream))
             
-            st.image(image, caption=f'Converted {uploaded_file.name}', use_container_width=True)
+            st.image(image, caption=f'Converted {uploaded_file.name}')
             
             output_image = BytesIO()
             image.save(output_image, format=output_format)
